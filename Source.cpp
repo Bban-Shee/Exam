@@ -1,6 +1,7 @@
 #include <iostream>
 using namespace std;
 
+//Announcing functions
 int Rrand(int range_min, int range_max);
 void Fill(int A[], unsigned int m);
 void Print(int A[], unsigned int m);
@@ -11,6 +12,7 @@ const int RAND = 10;
 
 int main()
 {
+	//Create a dynamic array
 	int m;
 	cout << "Enter the size of the array: ";
 	cin >> m;
@@ -22,16 +24,20 @@ int main()
 	int* A = new int[m];
 	cout << endl;
 
+	//Fill the array with pseudorandom numbers and output it
 	Fill(A, m);
 	cout << "Generated array: ";
 	Print(A, m);
 
+	//Calculate and output the number of different array numbers
 	Unique(A, m);
 
+	//Sort and output the sorted array
 	Sort(A, m);
 	cout << "Sorted array: ";
 	Print(A, m);
 
+	//Free the allocated memory for the dynamic array
 	delete[] A;
 }
 
